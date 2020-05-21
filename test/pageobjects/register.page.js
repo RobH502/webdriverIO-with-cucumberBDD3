@@ -8,7 +8,7 @@ class Register extends Page {
 
 
     get registerLink() { return $('//a[contains(@href, "/register")]'); }
-    get firstNameField()  {return $('input[@name="firstName"]'); }
+    get firstNameField()  {return $('//input[@name="firstName"]'); }
 
     /**
      * define or overwrite page methods
