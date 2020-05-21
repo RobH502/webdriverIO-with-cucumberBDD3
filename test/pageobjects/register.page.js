@@ -1,4 +1,5 @@
 import Page from './page'
+import utl   from '../../utilities/common-utilities';
 
 class Register extends Page {
 
@@ -61,7 +62,7 @@ class Register extends Page {
     //Verify that the registration success message appears
     registerSuccess() {
       this.registerSuccessMessage.waitForDisplayed(5000);
-      return this.successMessage.isDisplayed();
+      return this.registerSuccessMessage.isDisplayed();
     }
 
 
@@ -70,8 +71,8 @@ class Register extends Page {
     //Fill out the "Username" and "Password" fields
     fillOutInputFields(username, password) {
       //this.waitForloginPageToLoad();
-      this.usernameInput.setValue(username);
-      this.passwordInput.setValue(password);
+      this.usernameInput.setValue(username + utl.getTimeStamp.toString());
+      this.passwordInput.setValue(password + utl.getTimeStamp.toString());
       this.loginButton.click();
     }
 
