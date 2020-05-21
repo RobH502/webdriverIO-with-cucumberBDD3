@@ -71,8 +71,8 @@ class Register extends Page {
     //Fill out the "Username" and "Password" fields
     fillOutInputFields(username, password) {
       //this.waitForloginPageToLoad();
-      this.usernameInput.setValue(username + utl.getTimeStamp.toString());
-      this.passwordInput.setValue(password + utl.getTimeStamp.toString());
+      this.usernameInput.setValue(username + utl.getTimeStamp().toString());
+      this.passwordInput.setValue(password + utl.getTimeStamp().toString());
       this.loginButton.click();
     }
 
