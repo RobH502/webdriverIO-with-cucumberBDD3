@@ -15,5 +15,5 @@ Feature: Logging into the site
         And I should see the Logout link
 
         Examples:
-        |userName| |password|
-        |"test"| |"password"|
+        |username| |password|
+        |"test01"| |"password"|

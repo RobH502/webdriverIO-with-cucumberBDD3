@@ -18,4 +18,4 @@ Feature: Register an account
 
         Examples:
         |firstName| |lastName| |userName| |password|
-        |"Test1"| |"Tester1"| |"testers1"| |"password"|
+        |"Test01"| |"Tester01"| |"test01"| |"password"|
