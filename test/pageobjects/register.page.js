@@ -8,7 +8,12 @@ class Register extends Page {
 
 
     get registerLink() { return $('//a[contains(@href, "/register")]'); }
-    get firstNameField()  {return $('//input[@name="firstName"]'); }
+    get firstNameField()  { return $('//input[@name="firstName"]'); }
+    get lastNameField()   { return $('//input[@name="lastName"]'); }
+    get usernameField()   { return $('//input[@name="username"]'); }
+    get passwordField()   { return $('//input[@name="password"]'); }
+    get registerButton()  { return $('//button[contains(text(), "Register")]'); }
+    get successMessage()  { return $('//div[contains(text(), "Registration successful")]'); }
 
     /**
      * define or overwrite page methods
@@ -18,13 +23,29 @@ class Register extends Page {
         browser.pause(2000);
     }
 
-    clickRegister() {
+    clickRegisterLink() {
       this.registerLink.click();
     }
 
-    firstNameDisplayed() {
-      this.firstNameField.waitForDisplayed(5000);
-      return this.firstNameField.isDisplayed();
+    fillOutFields(fName, lName, username, password) {
+      this.firstNameField.setValue(fName);
+      this.lastNameField.setValue(lName);
+      this.usernameField.setValue(username);
+      this.passwordField.setValue(password);
+    }
+
+    clickRegisterButton() {
+      this.registerButton.click();
+    }
+
+    registerSuccess() {
+      this.successMessage.waitForDisplayed(5000);
+      return this.successMessage.isDisplayed();
+    }
+
+    returnToLogin() {
+      browser.pause(2000);
+      return browser.getUrl().should.equal('http://localhost:8080/login');
     }
 /*
     waitForAccountPageToLoad () {
