@@ -14,13 +14,13 @@ class Register extends Page {
     get usernameField()   { return $('//input[@name="username"]'); }
     get passwordField()   { return $('//input[@name="password"]'); }
     get registerButton()  { return $('//button[contains(text(), "Register")]'); }
-    get successMessage()  { return $('//div[contains(text(), "Registration successful")]'); }
+    get registerSuccessMessage()  { return $('//div[contains(text(), "Registration successful")]'); }
 
     //Login page
     get usernameInput()   { return $('//input[@name="username"]'); }
     get passwordInput()   { return $('//input[@name="password"]'); }
     get loginButton()     { return $('//button[contains(text(), "Login")]'); }
-    get successMessage()  { return $('//p[contains(text(), "logged in with React!!")]') }
+    get loginSuccessMessage()  { return $('//p[contains(text(), "logged in with React!!")]') }
     get logoutLink()      { return $('//a[contains(@href, "/login") and contains(text(), "Logout")]'); }
 
     /**
@@ -33,7 +33,7 @@ class Register extends Page {
 
 
     //Register
-    
+
     //Click the "Register" link on the login page
     clickRegisterLink() {
       this.registerLink.click();
@@ -60,7 +60,7 @@ class Register extends Page {
 
     //Verify that the registration success message appears
     registerSuccess() {
-      this.successMessage.waitForDisplayed(5000);
+      this.registerSuccessMessage.waitForDisplayed(5000);
       return this.successMessage.isDisplayed();
     }
 
@@ -82,8 +82,8 @@ class Register extends Page {
 
     //Verify that the message "You've logged in with React!!" is displayed upon logging in
     successMessageDisplayed() {
-      this.successMessage.waitForDisplayed(5000);
-      return this.successMessage.isDisplayed().should.be.true;
+      this.loginSuccessMessage.waitForDisplayed(5000);
+      return this.loginSuccessMessage.isDisplayed().should.be.true;
     }
 
     //Verify that the "Logout" link is visible upon loggin in

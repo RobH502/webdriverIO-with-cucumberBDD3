@@ -19,9 +19,9 @@ When('I click the Register button', function() {
 
 //Login
 When(/^I enter valid credentials into the Username "([^"]*)" and Password "([^"]*)" fields$/, function(username, password) {
-    login.fillOutInputFields(username, password);
+    register.fillOutInputFields(username, password);
 });
 
 When('I click the Login button', function() {
-    login.clickLoginButton();
+    register.clickLoginButton();
 })
