@@ -12,7 +12,7 @@ class MyAccount extends Page {
      * define or overwrite page methods
      */
     open () {
-        super.open('http://www.phptravels.net/account')       //this will append `contact-us` to the baseUrl to form complete URL
+        super.open('')       //this will append `contact-us` to the baseUrl to form complete URL
         browser.pause(2000);
     }
 
