@@ -3,7 +3,7 @@ import register from '../pageobjects/register.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
 Then('I should see a list of search results', function () {
-  register.firstNameDisplayed();
+  register.firstNameDisplayed().should.be.true;
 });
 
 // *** belongs to ta-loging  feature
