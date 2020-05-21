@@ -1,9 +1,9 @@
 import { Then } from 'cucumber';
-import myAccount from '../pageobjects/ta-myaccount.page';
+import register from '../pageobjects/register.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
 Then(/^I should see a list of search results$/, function () {
-  yahooPage.isSearched().should.be.true;
+  register.firstNameDisplayed();
 });
 
 // *** belongs to ta-loging  feature

@@ -22,7 +22,10 @@ class Register extends Page {
       this.registerLink.click();
     }
 
-
+    firstNameDisplayed() {
+      this.firstNameField.waitForDisplayed(5000);
+      return this.firstNameField.isDisplayed();
+    }
 /*
     waitForAccountPageToLoad () {
       if(!this.accountMessage.isDisplayed()){
