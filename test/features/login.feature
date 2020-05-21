@@ -16,4 +16,4 @@ Feature: Logging into the site
 
         Examples:
         |username| |password|
-        |"test01"| |"password"|
+        |"test02"| |"password"|

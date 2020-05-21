@@ -14,9 +14,9 @@ Then('I should see a success message', function () {
 
 //Login
 Then('I should see a message saying that I have logged in with React', function() {
-  login.successMessageDisplayed();
+  register.successMessageDisplayed();
 });
 
 Then('I should see the Logout link', function() {
-  login.logoutLinkDisplayed();
+  register.logoutLinkDisplayed();
 });
