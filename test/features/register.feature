@@ -17,7 +17,7 @@ Feature: Register an account
 
         Examples:
         |firstName| |lastName| |userName| |password|
-        |"Test02"| |"Tester02"| |"test02"| |"password"|
+        |"Test04"| |"Tester04"| |"test04"| |"password"|
 
 
         Scenario Outline: Logging into a registered account
@@ -28,4 +28,4 @@ Feature: Register an account
 
         Examples:
         |username| |password|
-        |"test02"| |"password"|
+        |"test04"| |"password"|
