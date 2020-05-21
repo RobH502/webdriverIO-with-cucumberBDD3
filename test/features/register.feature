@@ -8,6 +8,6 @@ Feature: Register an account
 
         Given I am on the site
 
-    Scenario Outline: Access the Register page
+    Scenario: Access the Register page
         When I click the Register button
         Then I should see the First Name field
