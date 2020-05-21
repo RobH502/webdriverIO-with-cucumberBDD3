@@ -24,4 +24,4 @@ When(/^I enter valid credentials into the Username "([^"]*)" and Password "([^"]
 
 When('I click the Login button', function() {
     register.clickLoginButton();
-})
+});
