@@ -7,6 +7,7 @@ class MyAccount extends Page {
     */
 
     get accountMessage () { return $('.text-align-left'); }
+    get registerLink() { return $('')}
 
     /**
      * define or overwrite page methods
@@ -14,6 +15,10 @@ class MyAccount extends Page {
     open () {
         super.open('')       //this will append `contact-us` to the baseUrl to form complete URL
         browser.pause(2000);
+    }
+
+    clickRegister() {
+      
     }
 
     waitForAccountPageToLoad () {
