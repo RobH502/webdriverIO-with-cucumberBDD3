@@ -2,7 +2,7 @@ import { Then } from 'cucumber';
 import register from '../pageobjects/register.page';
 import yahooPage from '../pageobjects/yahoo-search.page';
 
-Then(/^I should see a list of search results$/, function () {
+Then('I should see a list of search results', function () {
   register.firstNameDisplayed();
 });
 
