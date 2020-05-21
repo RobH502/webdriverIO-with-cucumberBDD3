@@ -1,9 +1,9 @@
 import { Given} from 'cucumber';
 import register from '../pageobjects/register.page';
-import yahooPage from '../pageobjects/yahoo-search.page';
+import login from '../pageobjects/login.page';
 
 
-// *** belongs to Yahoo serch feature
+//Load the site
 Given('I am on the site', function() {
   register.open();
 })

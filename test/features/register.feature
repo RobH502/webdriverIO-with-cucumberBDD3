@@ -10,7 +10,7 @@ Feature: Register an account
 
     Scenario Outline: Create an account
         When I click the Register link
-        And I enter valid credentials into the <firstName> <lastName> <userName> and <password> fields
+        And I enter valid credentials into the input fields <firstName> <lastName> <userName> <password>
         And I click the Register button
         Then I should be redirected to the login page
         And I should see a success message

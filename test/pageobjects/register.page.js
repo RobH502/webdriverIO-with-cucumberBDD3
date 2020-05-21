@@ -19,14 +19,16 @@ class Register extends Page {
      * define or overwrite page methods
      */
     open () {
-        super.open('')       //this will append `contact-us` to the baseUrl to form complete URL
+        super.open('')
         browser.pause(2000);
     }
 
+    //Click the "Register" link on the login page
     clickRegisterLink() {
       this.registerLink.click();
     }
 
+    //Fill out the fields on the Register page
     fillOutFields(fName, lName, username, password) {
       this.firstNameField.setValue(fName);
       this.lastNameField.setValue(lName);
@@ -34,29 +36,22 @@ class Register extends Page {
       this.passwordField.setValue(password);
     }
 
+    //Click the "Register" button after filling out the fields above it
     clickRegisterButton() {
       this.registerButton.click();
     }
 
-    registerSuccess() {
-      this.successMessage.waitForDisplayed(5000);
-      return this.successMessage.isDisplayed();
-    }
-
+    //Verify that the user is returned to the login page after completing registration
     returnToLogin() {
       browser.pause(2000);
       return browser.getUrl().should.equal('http://localhost:8080/login');
     }
-/*
-    waitForAccountPageToLoad () {
-      if(!this.accountMessage.isDisplayed()){
-        this.accountMessage.waitForDisplayed(5000);
-      }
+
+    //Verify that the registration success message appears
+    registerSuccess() {
+      this.successMessage.waitForDisplayed(5000);
+      return this.successMessage.isDisplayed();
     }
-    getUserInfo (){
-      return this.accountMessage.getText();
-    }
-    */
 }
 
 export default new Register()
